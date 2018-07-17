@@ -1,0 +1,37 @@
+[Data Source]
+DisplayName=Calender
+Enabled=true
+Parent=caldav-stub
+
+[Offline]
+StaySynchronized=false
+
+[WebDAV Backend]
+AvoidIfmatch=false
+CalendarAutoSchedule=false
+DisplayName=Calender
+EmailAddress=philip.trauner@aol.com
+ResourcePath=/1086447305/calendars/6242518D-2DAA-46F5-8112-881935B88FB6/
+ResourceQuery=
+SslTrust=
+
+[Calendar]
+BackendName=caldav
+Color=#34aadc
+Selected=true
+
+[Security]
+Method=tls
+
+[Refresh]
+Enabled=true
+IntervalMinutes=5
+
+[Authentication]
+Host=p60-caldav.icloud.com
+Method=plain/password
+Port=443
+ProxyUid=system-proxy
+RememberPassword=true
+User=philip.trauner@aol.com
+CredentialName=

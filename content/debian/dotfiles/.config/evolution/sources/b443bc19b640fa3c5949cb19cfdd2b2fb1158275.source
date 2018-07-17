@@ -1,0 +1,28 @@
+[Data Source]
+DisplayName=trauner.philip@gmail.com
+Enabled=true
+Parent=a2e4a8bdaca33019ec6d05b362723bb7ebe5ebb7
+
+[Mail Composition]
+Bcc=
+Cc=
+DraftsFolder=folder://a2e4a8bdaca33019ec6d05b362723bb7ebe5ebb7/%5bGmail%5d/Drafts
+ReplyStyle=default
+SignImip=true
+TemplatesFolder=folder://local/Templates
+StartBottom=inconsistent
+TopSignature=inconsistent
+
+[Mail Identity]
+Address=trauner.philip@gmail.com
+Aliases=
+Name=Philip Trauner
+Organization=
+ReplyTo=
+SignatureUid=none
+
+[Mail Submission]
+SentFolder=folder://local/Sent
+TransportUid=4da6832de5a1fe2a4075b2123a161a7ae225c2ea
+RepliesToOriginFolder=false
+UseSentFolder=true

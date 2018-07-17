@@ -1,0 +1,6 @@
+export PATH="$HOME/.cargo/bin:$HOME/Developer/bin/:$PATH"
+
+xbindkeys &
+dropbox start
+blueman-applet &
+volctl &

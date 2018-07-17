@@ -1,0 +1,4 @@
+repos
+content/scripts/arch-bootstrap.sh
+content/debian/dotfiles/.config/evolution/accels
+content/debian/dotfiles/.config/evolution/mail/folders

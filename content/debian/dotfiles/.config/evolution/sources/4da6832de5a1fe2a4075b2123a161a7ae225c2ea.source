@@ -1,0 +1,19 @@
+[Data Source]
+DisplayName=trauner.philip@gmail.com
+Enabled=true
+Parent=a2e4a8bdaca33019ec6d05b362723bb7ebe5ebb7
+
+[Mail Transport]
+BackendName=smtp
+
+[Authentication]
+Host=smtp.googlemail.com
+Method=Google
+Port=465
+ProxyUid=system-proxy
+RememberPassword=true
+User=trauner.philip@gmail.com
+CredentialName=
+
+[Security]
+Method=ssl-on-alternate-port

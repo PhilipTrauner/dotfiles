@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<filteroptions>
+  <ruleset>
+    <rule enabled="true" grouping="all" threading="all" source="incoming">
+      <title>Inbox</title>
+      <partset>
+        <part name="all"/>
+      </partset>
+      <sources with="local_remote_active" autoupdate="true"/>
+    </rule>
+  </ruleset>
+</filteroptions>
