@@ -33,4 +33,15 @@ mkdir -p ~/Developer/scripts
 cp arch-bootstrap/arch-bootstrap.sh ~/Developer/scripts
 chmod +x ~/Developer/scripts/arch-bootstrap.sh
 
-cd ..
+clone_or_fetch "PhilipTrauner/rofi-calc"
+
+cd rofi-calc
+autoreconf -i
+mkdir -p build
+cd build
+../configure
+make
+sudo make install
+sudo libtool --finish /usr/local/lib/rofi/
+
+cd ../..
