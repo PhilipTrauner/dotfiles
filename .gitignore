@@ -3,3 +3,6 @@ content/scripts/arch-bootstrap.sh
 content/debian/dotfiles/.config/evolution/accels
 content/debian/dotfiles/.config/evolution/mail/folders
 content/debian/dotfiles/.config/evolution/mail/state.ini
+content/debian/dotfiles/.config/evolution/.running
+content/debian/dotfiles/.config/evolution/mail/properties.db
+content/debian/dotfiles/.config/evolution/mail/remote-content.db
