@@ -12,12 +12,14 @@ if [ ! -x "$(command -v brew)" ]; then
 	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
+# Install more current bash version
+brew install bash
+
 brew install git git-lfs
 
 # git lfs is "special"
 git lfs install
 
-git lfs checkout || echo "Checkout failed, continuing anyway..."
+git checkout || echo "Checkout failed, continuing anyway..."
 
-mkdir -p ~/Developer/setup
-mv ./* ~/Developer/setup
+move_to_home
