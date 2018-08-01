@@ -35,3 +35,7 @@ ProxyUid=system-proxy
 RememberPassword=true
 User=philip.trauner@aol.com
 CredentialName=
+
+[Alarms]
+IncludeMe=true
+LastNotified=2018-07-25T11:00:00Z
