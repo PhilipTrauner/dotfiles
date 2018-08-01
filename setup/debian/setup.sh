@@ -2,13 +2,14 @@
 
 set -e
 
+. utils.sh
+
+ask_details
+
 # Create default directory tree
 mkdir -p ~/Developer/scripts ~/Developer/chroots ~/Developer/clones \
 	~/Developer/debs ~/Developer/testing ~/Downloads ~/Infinite
 
-
-sudo dpkg --add-architecture i386
-sudo dpkg --add-architecture armhf
 
 # SSH agent setup
 mkdir -p ~/.ssh
@@ -18,34 +19,34 @@ Host *
 	IdentityFile ~/.ssh/id_rsa
 EOF
 
-sudo apt-get update
-sudo apt-get upgrade -y
+sudo ./setup/debian/apt.sh
 
-sudo apt-get install -y curl wget apt-transport-https dirmngr
+renew_sudo # Renew sudo timestamp
 
-sudo ./setup/debian/signing-keys.sh
-sudo ./setup/debian/repos.sh
-
-sudo apt-get update
-
-sudo ./setup/debian/networking-setup.sh
-
-sudo apt-get install -y $(cat packages.txt | paste -s -d " ")
-sudo apt-get autoremove
+[[ -v SKIP_NETWORKING ]] || sudo ./setup/debian/networking-setup.sh
 
 cp -r content/debian/dotfiles/. ~/
 cp -r content/shared/dotfiles/. ~/
 cp -r content/debian/scripts/. ~/Developer/scripts
 
+./setup/shared/setup.sh
+
 sudo chsh -s $(which zsh) "$USER"
 
-./setup/shared/setup.sh
 ./setup/debian/groups.sh
 ./setup/debian/custom-package-managers.sh
-./setup/debian/git-repos.sh
-./setup/debian/chroots.sh
+[[ -v QUICK ]] || ./setup/debian/git-repos.sh
+[[ -v QUICK ]] || ./setup/debian/chroots.sh
 
+renew_sudo 
 sudo cp -r content/debian/overlay/* /
 
+sudo -H ./setup/debian/install-debs.sh
+
+sudo ./setup/debian/alternatives.sh
+
+renew_sudo
 ./setup/debian/desktop-env.sh
-./setup/debian/grub.sh
+
+renew_sudo
+sudo update-grub
