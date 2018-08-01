@@ -15,6 +15,6 @@ export PATH="$HOME/.cargo/bin:$PATH"
 if ! [ -x "$(command -v rustup)" ]; then
 	wget -O rustup.sh https://sh.rustup.rs
 	chmod +x rustup.sh
-	./rustup.sh -y --no-modify-path --default-host x86_64-unknown-linux-gnu --default-toolchain stable
+	./rustup.sh -y --no-modify-path --default-toolchain stable
 	rm rustup.sh
 fi
