@@ -32,5 +32,6 @@ bindkey '^[[1;3D' backward-word
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-export PATH="$HOME/.cargo/bin:/snap/bin:$HOME/Developer/bin:$HOME/Developer/scripts:$HOME/.yarn/bin:$PATH"
-export LD_LIBRARY_PATH="$HOME/Developer/local/usr/lib:$LD_LIBRARY_PATH"
+# Environment
+export PATH="$HOME/.cargo/bin:$HOME/Developer/scripts:$HOME/.yarn/bin:$HOME/.local/bin/:$PATH"
+export LD_LIBRARY_PATH="$HOME/.local/lib:$LD_LIBRARY_PATH"
