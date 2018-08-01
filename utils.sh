@@ -38,10 +38,26 @@ function os_detect {
 	fi
 }
 
+move_to_home() {
+	if [ "$PWD" == "$HOME/Developer/setup" ]; then
+		emphasis "Already moved to home!"
+	else
+		mkdir -p ~/Developer/setup
+		mv ./* ~/Developer/setup
+		emphasis "Moved to '$HOME/Developer/setup'."
+	fi
+}
+
 ask_details() {
+	sudo -k # Invalidate sudo timestamp to force password input
+	
 	while ! sudo -n true 2> /dev/null ; do
 		read -s -p "Password: " sudo_password
 		echo
 		sudo --stdin --validate <<< "${sudo_password}" 2> /dev/null || echo -n ""
 	done
+}
+
+renew_sudo() { 
+	sudo -S -v <<< "${sudo_password}" 2> /dev/null
 }
