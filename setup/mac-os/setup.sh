@@ -1,13 +1,17 @@
-#!/bin/bash
+#!/usr/local/bin/bash
 
 set -e
 
+. utils.sh
+
+ask_details
+
 TAPS=("homebrew/cask-fonts" "homebrew/cask-versions" "homebrew/cask-drivers" "homebrew/cask-fonts")
 
-FORMULAS=("cmake" "cmus" "coreutils" "curl" "direnv" "ffmpeg" "git" "git-lfs" "grep" \
-	"htop" "imagemagick" "jq" "make" "mas" "md5sha1sum" "ncurses" "neofetch" "nmap" \
-	"node" "p7zip" "python3" "python@2" "rsync" "screenfetch" "ssh-copy-id" "tree" \
-	"unrar" "watch" "wget" "wireguard-tools" "yarn" "zsh")
+FORMULAS=("bash" "cmake" "cmus" "coreutils" "curl" "direnv" "ffmpeg" "git" "git-lfs" \
+	"grep" "htop" "imagemagick" "jq" "make" "mas" "md5sha1sum" "ncurses" "neofetch" \
+	"nmap" "node" "p7zip" "pipenv" "python3" "python@2" "rsync" "screenfetch" \
+	"ssh-copy-id" "tree" "unrar" "watch" "wget" "wireguard-tools" "yarn" "zsh")
 DEFAULT_NAME_FORMULAS=("gnu-sed" "make" "grep" "gnu-indent" "gnu-tar")
 
 CASKS=("airfoil" "appcleaner" "bartender" "blockblock" "dropbox" "etcher" "filezilla" \
@@ -63,15 +67,19 @@ brew update
 brew upgrade
 brew install ${FORMULAS[*]} || echo -n ""
 brew install --with-default-names ${DEFAULT_NAME_FORMULAS[*]} || echo -n ""
-brew cask install ${CASKS[*]} || echo -n ""
-mas install ${MAS[*]}
+
+for cask in "${CASKS[@]}"
+do
+	renew_sudo
+	[[ -v QUICK ]] || brew cask install $cask || echo -n ""
+done
+
+[[ -v QUICK ]] || mas install ${MAS[*]}
 
 brew cleanup
 brew cask cleanup
 
 ./setup/shared/setup.sh
-
-sudo pip3 install pipenv
 
 # Append zsh to shells
 if ! cat /etc/shells | grep -q "/usr/local/bin/zsh" ; then
@@ -81,6 +89,7 @@ fi
 cp -r content/mac-os/dotfiles/. ~/
 cp -r content/shared/dotfiles/. ~/
 
+renew_sudo
 sudo chsh -s /usr/local/bin/zsh $(whoami)
 
 # Symlink WireGuard configuration directory to wg-quick lookup path
