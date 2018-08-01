@@ -1,2 +1,3 @@
 rofi.theme: /usr/share/rofi/themes/Pop-Dark.rasi
-rofi.modi: run,window,calc
+rofi.modi: run,window,calc,ssh
+rofi.terminal: /usr/local/bin/alacritty
