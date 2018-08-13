@@ -2,6 +2,9 @@ if [ -x "$(command -v direnv)" ]; then
 	eval "$(direnv hook zsh)"
 fi
 
+# Completions
+fpath+=~/.antigen/completions
+
 # antigen
 source ~/.antigen/antigen.zsh
 antigen use oh-my-zsh
