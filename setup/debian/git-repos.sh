@@ -22,6 +22,8 @@ clone_or_fetch "jwilm/alacritty" "scrollback"
 
 cd alacritty
 
+export PATH="$HOME/.cargo/bin:$PATH"
+
 cargo install cargo-deb || echo "\"cargo-deb\" already installed!"
 cp $(cargo deb) ~/Developer/debs
 
