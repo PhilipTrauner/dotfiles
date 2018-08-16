@@ -2,6 +2,8 @@
 
 set -e
 
+. utils.sh
+
 # Install Developer tools
 until ! xcode-select --install 2> /dev/null ; do
 	sleep 2
@@ -12,10 +14,7 @@ if [ ! -x "$(command -v brew)" ]; then
 	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-# Install more current bash version
-brew install bash
-
-brew install git git-lfs
+brew install bash git git-lfs || echo -n ""
 
 # git lfs is "special"
 git lfs install
