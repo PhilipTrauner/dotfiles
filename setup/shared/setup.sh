@@ -18,3 +18,9 @@ if ! [ -x "$(command -v rustup)" ]; then
 	./rustup.sh -y --no-modify-path --default-toolchain stable
 	rm rustup.sh
 fi
+
+rustup update
+
+mkdir -p ~/.antigen/completions
+rustup completions zsh > ~/.antigen/completions/_rustup
+ln -sf ~/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/share/zsh/site-functions/_cargo ~/.antigen/completions/_cargo
