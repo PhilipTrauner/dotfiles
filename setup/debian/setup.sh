@@ -30,6 +30,7 @@ cp -r content/shared/dotfiles/. ~/
 cp -r content/debian/scripts/. ~/Developer/scripts
 
 ./setup/shared/setup.sh
+ln -sf ~/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/share/zsh/site-functions/_cargo ~/.antigen/completions/_cargo
 
 sudo chsh -s $(which zsh) "$USER"
 

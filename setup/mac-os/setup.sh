@@ -80,6 +80,8 @@ brew cleanup
 brew cask cleanup
 
 ./setup/shared/setup.sh
+ln -sf ~/.rustup/toolchains/stable-x86_64-apple-darwin/share/zsh/site-functions/_cargo ~/.antigen/completions/_cargo
+
 
 # Append zsh to shells
 if ! cat /etc/shells | grep -q "/usr/local/bin/zsh" ; then
