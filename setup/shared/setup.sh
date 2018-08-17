@@ -19,6 +19,7 @@ if ! [ -x "$(command -v rustup)" ]; then
 	rm rustup.sh
 fi
 
+rustup self update
 rustup update
 
 mkdir -p ~/.antigen/completions
