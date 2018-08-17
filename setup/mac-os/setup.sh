@@ -12,7 +12,7 @@ FORMULAS=("bash" "cmake" "cmus" "coreutils" "curl" "direnv" "ffmpeg" "git" "git-
 	"grep" "htop" "imagemagick" "jq" "make" "mas" "md5sha1sum" "ncurses" "neofetch" \
 	"nmap" "node" "p7zip" "pipenv" "python3" "python@2" "rsync" "screenfetch" \
 	"ssh-copy-id" "tree" "unrar" "watch" "wget" "wireguard-tools" "yarn" "zsh")
-DEFAULT_NAME_FORMULAS=("gnu-sed" "make" "grep" "gnu-indent" "gnu-tar")
+DEFAULT_NAME_FORMULAS=("gnu-sed" "make" "grep" "gnu-indent" "gnu-tar" "findutils")
 
 CASKS=("airfoil" "appcleaner" "bartender" "blockblock" "dropbox" "etcher" "filezilla" \
 	"font-source-code-pro" "google-chrome" "google-chrome-canary" "hyperdock" "iterm2" \
@@ -77,7 +77,6 @@ done
 [[ -v QUICK ]] || mas install ${MAS[*]}
 
 brew cleanup
-brew cask cleanup
 
 ./setup/shared/setup.sh
 ln -sf ~/.rustup/toolchains/stable-x86_64-apple-darwin/share/zsh/site-functions/_cargo ~/.antigen/completions/_cargo
