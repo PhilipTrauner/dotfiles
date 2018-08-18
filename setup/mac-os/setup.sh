@@ -10,11 +10,11 @@ TAPS=("homebrew/cask-fonts" "homebrew/cask-versions" "homebrew/cask-drivers" "ho
 
 FORMULAS=("bash" "cmake" "cmus" "coreutils" "curl" "direnv" "ffmpeg" "git" "git-lfs" \
 	"grep" "htop" "imagemagick" "jq" "make" "mas" "md5sha1sum" "ncurses" "neofetch" \
-	"nmap" "node" "p7zip" "pipenv" "python3" "python@2" "rsync" "screenfetch" \
+	"nmap" "node" "p7zip" "pipenv" "python3" "python@2" "qemu" "rsync" "screenfetch" \
 	"ssh-copy-id" "tree" "unrar" "watch" "wget" "wireguard-tools" "yarn" "zsh")
 DEFAULT_NAME_FORMULAS=("gnu-sed" "make" "grep" "gnu-indent" "gnu-tar" "findutils")
 
-CASKS=("airfoil" "appcleaner" "bartender" "blockblock" "dropbox" "etcher" "filezilla" \
+CASKS=("airfoil" "appcleaner" "bartender" "blockblock" "docker" "dropbox" "etcher" "filezilla" \
 	"font-source-code-pro" "google-chrome" "google-chrome-canary" "hyperdock" "iterm2" \
 	"knockknock" "lingon-x5 " "quicklook-json" "sensiblesidebuttons" "spectacle" "spotify" \
 	"spotify-notifications" "sublime-text-dev" "transmission" "typora" \
