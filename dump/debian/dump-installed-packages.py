@@ -4,7 +4,6 @@ from apt import cache
 
 EXCLUDE = ["linux-image-amd64", "task-laptop"]
 
-
 def pkg_has_remote(pkg):
     for version in pkg.versions:
         if not version.downloadable:
@@ -32,7 +31,7 @@ for pkg in obtainable:
 
 minimal = [pkg for pkg in obtainable if pkg.name not in dependencies]
 
-with open("packages.txt", "w") as packages:
+with open("setup/debian/packages.txt", "w") as packages:
     content = ""
     for pkg in minimal:
         if pkg.name not in EXCLUDE:

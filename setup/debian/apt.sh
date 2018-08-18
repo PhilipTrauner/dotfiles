@@ -15,5 +15,5 @@ apt-get install -y curl wget apt-transport-https dirmngr
 
 apt-get update
 
-apt-get install -y $(cat packages.txt | paste -s -d " ")
+apt-get install -y $(cat setup/debian/packages.txt | paste -s -d " ")
 apt-get autoremove -y
