@@ -20,7 +20,6 @@ if ! [ -x "$(command -v rustup)" ]; then
 fi
 
 rustup self update
-rustup update
 
 mkdir -p ~/.antigen/completions
 rustup completions zsh > ~/.antigen/completions/_rustup
