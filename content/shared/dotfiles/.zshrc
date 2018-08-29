@@ -26,10 +26,10 @@ alias ip="ip -c"
 
 # zsh features
 setopt appendhistory autocd beep extendedglob nomatch notify NO_GLOBAL_RCS
-bindkey '^[[1;5D' beginning-of-line
-bindkey '^[[1;5C' end-of-line
-bindkey '^[[1;3C' forward-word
-bindkey '^[[1;3D' backward-word
+bindkey "[D" backward-word
+bindkey "[C" forward-word
+bindkey "^[a" beginning-of-line
+bindkey "^[e" end-of-line
 
 # Language
 export LC_ALL=en_US.UTF-8
