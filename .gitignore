@@ -6,3 +6,4 @@ content/debian/dotfiles/.config/evolution/mail/state.ini
 content/debian/dotfiles/.config/evolution/.running
 content/debian/dotfiles/.config/evolution/mail/properties.db
 content/debian/dotfiles/.config/evolution/mail/remote-content.db
+*.DS_Store
