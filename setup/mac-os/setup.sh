@@ -14,11 +14,11 @@ FORMULAS=("bash" "cmake" "cmus" "coreutils" "curl" "direnv" "ffmpeg" "git" "git-
 	"ssh-copy-id" "tree" "unrar" "watch" "wget" "wireguard-tools" "yarn" "zsh")
 DEFAULT_NAME_FORMULAS=("gnu-sed" "make" "grep" "gnu-indent" "gnu-tar" "findutils")
 
-CASKS=("airfoil" "appcleaner" "bartender" "blockblock" "docker" "dropbox" "etcher" "filezilla" \
-	"font-source-code-pro" "google-chrome" "google-chrome-canary" "hyperdock" "iterm2" \
+CASKS=("airfoil" "appcleaner" "bartender" "blockblock" "docker" "dropbox" "etcher" \
+	"filezilla" "font-source-code-pro" "google-chrome" "google-chrome-canary" "iterm2" \
 	"knockknock" "lingon-x5 " "quicklook-json" "sensiblesidebuttons" "spectacle" "spotify" \
 	"spotify-notifications" "sublime-text-dev" "transmission" "typora" \
-	"virtualbox" "virtualbox-extension-pack" "vlc" "wireshark")
+	"virtualbox" "virtualbox-extension-pack" "vlc" "visual-studio-code" "wireshark")
 
 # Pixelmator, Keynote, Pages, Numbers, Xcode, Amphetamine
 MAS=("407963104" "409183694" "409201541" "409203825" "497799835" "937984704")
@@ -49,8 +49,13 @@ EOF
 
 chflags nohidden ~/Library/
 
+renew_sudo
+
 # Disable Time Machine
 sudo tmutil disable
+
+# Enable Remote Login (ssh)
+sudo systemsetup -setremotelogin on || echo -n ""
 
 ./setup/mac-os/defaults.sh
 
@@ -58,11 +63,15 @@ sudo tmutil disable
 mkdir -p ~/Library/Application\ Support/Spectacle
 cp content/mac-os/Shortcuts.json ~/Library/Application\ Support/Spectacle
 
+# Override iTerm2 config
+cp content/mac-os/iterm2/com.googlecode.iterm2.plist ~/Library/Preferences/
+
 for tap in "${TAPS[@]}"
 do
 	brew tap "$tap"
 done
 
+renew_sudo
 brew update
 brew upgrade
 brew install ${FORMULAS[*]} || echo -n ""
