@@ -9,16 +9,16 @@ ask_details
 
 TAPS=("homebrew/cask-fonts" "homebrew/cask-versions" "homebrew/cask-drivers" "homebrew/cask-fonts")
 
-FORMULAS=("bash" "cmake" "cmus" "coreutils" "curl" "direnv" "ffmpeg" "git" "git-lfs" \
-	"grep" "htop" "imagemagick" "jq" "make" "mas" "md5sha1sum" "ncurses" "neofetch" \
-	"nmap" "node" "p7zip" "pipenv" "python3" "python@2" "qemu" "rsync" "screenfetch" \
-	"ssh-copy-id" "tree" "unrar" "watch" "wget" "wireguard-tools" "yarn" "zsh")
+FORMULAS=("bash" "cmake" "colordiff" "coreutils" "curl" "direnv" "ffmpeg" "findutils" "flake8" "git" \
+	"git-lfs" "gnu-indent" "gnu-sed" "gnu-tar" "grep" "hexyl" "htop" "imagemagick" "jq" "make" "mas" \
+	"md5sha1sum" "mypy" "nano" "ncurses" "neofetch" "nmap" "node" "p7zip" "python3" "python@2" "qemu" \
+	"rsync" "screenfetch" "ssh-copy-id" "tree" "unrar" "watch" "wget" "yarn" "zsh")
 
-CASKS=("airfoil" "appcleaner" "bartender" "blockblock" "docker" "dropbox" "etcher" \
-	"filezilla" "font-source-code-pro" "google-chrome" "google-chrome-canary" "iterm2" \
-	"knockknock" "lingon-x5 " "quicklook-json" "sensiblesidebuttons" "spectacle" "spotify" \
-	"spotify-notifications" "sublime-text-dev" "transmission" "typora" \
-	"virtualbox" "virtualbox-extension-pack" "vlc" "visual-studio-code" "wireshark")
+CASKS=("1password" "airfoil" "appcleaner" "bartender" "blockblock" "docker" "dropbox" \
+	"etcher" "font-overpass" "font-source-code-pro" "google-chrome" "google-chrome-canary" "iterm2" \
+	"knockknock" "lingon-x5 " "quicklook-json" "sensiblesidebuttons" "spectacle" \
+	"spotify" "spotify-notifications" "sublime-text-dev" "transmission" "typora" \
+	 "vlc" "visual-studio-code" "wireshark")
 
 # Pixelmator Pro, Keynote, Pages, Numbers, Xcode, Amphetamine, WireGuard
 MAS=("1289583905" "409183694" "409201541" "409203825" "497799835" "937984704" "1451685025")
