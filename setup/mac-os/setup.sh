@@ -12,7 +12,6 @@ FORMULAS=("bash" "cmake" "cmus" "coreutils" "curl" "direnv" "ffmpeg" "git" "git-
 	"grep" "htop" "imagemagick" "jq" "make" "mas" "md5sha1sum" "ncurses" "neofetch" \
 	"nmap" "node" "p7zip" "pipenv" "python3" "python@2" "qemu" "rsync" "screenfetch" \
 	"ssh-copy-id" "tree" "unrar" "watch" "wget" "wireguard-tools" "yarn" "zsh")
-DEFAULT_NAME_FORMULAS=("gnu-sed" "make" "grep" "gnu-indent" "gnu-tar" "findutils")
 
 CASKS=("airfoil" "appcleaner" "bartender" "blockblock" "docker" "dropbox" "etcher" \
 	"filezilla" "font-source-code-pro" "google-chrome" "google-chrome-canary" "iterm2" \
@@ -75,7 +74,6 @@ renew_sudo
 brew update
 brew upgrade
 brew install ${FORMULAS[*]} || echo -n ""
-brew install --with-default-names ${DEFAULT_NAME_FORMULAS[*]} || echo -n ""
 
 for cask in "${CASKS[@]}"
 do
