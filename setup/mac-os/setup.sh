@@ -66,6 +66,9 @@ cp -r content/mac-os/spectacle/. ~/Library/Application\ Support/Spectacle
 # Override iTerm2 config
 cp content/mac-os/iterm2/com.googlecode.iterm2.plist ~/Library/Preferences/
 
+# iTerm2 setup
+cp -r content/mac-os/iterm2/. ~/Library/Preferences/
+
 for tap in "${TAPS[@]}"
 do
 	brew tap "$tap"
