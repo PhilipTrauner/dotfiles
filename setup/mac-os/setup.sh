@@ -9,10 +9,10 @@ ask_details
 
 TAPS=("homebrew/cask-fonts" "homebrew/cask-versions" "homebrew/cask-drivers" "homebrew/cask-fonts")
 
-FORMULAS=("bash" "cmake" "colordiff" "coreutils" "curl" "direnv" "ffmpeg" "findutils" "flake8" "git" \
-	"git-lfs" "gnu-indent" "gnu-sed" "gnu-tar" "grep" "hexyl" "htop" "imagemagick" "jq" "make" "mas" \
-	"md5sha1sum" "mypy" "nano" "ncurses" "neofetch" "nmap" "node" "p7zip" "python3" "python@2" "qemu" \
-	"rsync" "screenfetch" "ssh-copy-id" "tree" "unrar" "watch" "wget" "yarn" "zsh")
+FORMULAS=("bash" "black" "cmake" "colordiff" "coreutils" "curl" "direnv" "ffmpeg" "findutils" "flake8" \
+	"git" "git-lfs" "gnu-indent" "gnu-sed" "gnu-tar" "grep" "hexyl" "htop" "imagemagick" "jq" "make" \
+	"mas" "mypy" "nano" "ncurses" "neofetch" "nmap" "node" "p7zip" "python3" "python@2" "qemu" "rsync" \
+	"screenfetch" "ssh-copy-id" "tree" "unrar" "watch" "wget" "yarn" "zsh")
 
 CASKS=("1password" "airfoil" "appcleaner" "bartender" "blockblock" "docker" "dropbox" \
 	"etcher" "font-overpass" "font-source-code-pro" "google-chrome" "google-chrome-canary" "iterm2" \
