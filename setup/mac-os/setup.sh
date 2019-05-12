@@ -27,7 +27,7 @@ MAS=("1289583905" "409183694" "409201541" "409203825" "497799835" "937984704" "1
 caffeinate -i -w $$ &
 
 # Create default directory tree
-mkdir -p ~/Developer/scripts ~/Developer/clones ~/Developer/testing
+mkdir -p ~/Developer/scripts ~/Developer/clones ~/Developer/testing ~/Developer/virt
 
 # Install Developer tools
 until ! xcode-select --install 2> /dev/null ; do
