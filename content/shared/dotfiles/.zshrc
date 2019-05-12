@@ -2,6 +2,10 @@ if [ -x "$(command -v direnv)" ]; then
 	eval "$(direnv hook zsh)"
 fi
 
+if [ -d "${HOME}/.poetry" ]; then
+	source ~/.poetry/env
+fi
+
 # Completions
 fpath+=~/.antigen/completions
 
