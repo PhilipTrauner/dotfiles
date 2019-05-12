@@ -7,10 +7,10 @@ if [ -d "${HOME}/.poetry" ]; then
 fi
 
 # Completions
-fpath+=~/.antigen/completions
+fpath+="${HOME}/.antigen/completions"
 
 # antigen
-source ~/.antigen/antigen.zsh
+source "${HOME}/.antigen/antigen.zsh"
 antigen use oh-my-zsh
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-completions
@@ -21,7 +21,7 @@ antigen theme cypher
 antigen apply
 
 # History
-HISTFILE=~/.histfile
+HISTFILE="${HOME}/.histfile"
 HISTSIZE=1000
 SAVEHIST=1000
 
