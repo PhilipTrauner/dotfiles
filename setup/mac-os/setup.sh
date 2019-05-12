@@ -59,9 +59,9 @@ sudo systemsetup -setremotelogin on || echo -n ""
 
 ./setup/mac-os/defaults.sh
 
-# Override Spectacle config
+# Spectacle config
 mkdir -p ~/Library/Application\ Support/Spectacle
-cp content/mac-os/Shortcuts.json ~/Library/Application\ Support/Spectacle
+cp -r content/mac-os/spectacle/. ~/Library/Application\ Support/Spectacle
 
 # Override iTerm2 config
 cp content/mac-os/iterm2/com.googlecode.iterm2.plist ~/Library/Preferences/
