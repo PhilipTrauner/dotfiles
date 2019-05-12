@@ -100,8 +100,5 @@ cp -r content/shared/dotfiles/. ~/
 renew_sudo
 sudo chsh -s /usr/local/bin/zsh $(whoami)
 
-# Symlink WireGuard configuration directory to wg-quick lookup path
-sudo ln -sfn $HOME/Dropbox/VPN/WireGuard/ /etc/wireguard
-
 # Reset LaunchPad
 defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock
