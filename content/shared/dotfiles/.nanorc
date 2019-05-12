@@ -1,1 +1,6 @@
-set tabsize 4
+set autoindent
+set mouse
+set smooth
+unset morespace
+bind M-B prevword main
+bind M-F nextword main
