@@ -41,5 +41,5 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 # Environment
-export PATH="$HOME/.cargo/bin:$HOME/Developer/scripts:$HOME/.yarn/bin:$HOME/.local/bin/:$PATH"
+export PATH="/usr/local/bin:$HOME/.cargo/bin:$HOME/Developer/scripts:$HOME/.yarn/bin:$HOME/.local/bin:/usr/local/sbin:$PATH"
 export LD_LIBRARY_PATH="$HOME/.local/lib:$LD_LIBRARY_PATH"
