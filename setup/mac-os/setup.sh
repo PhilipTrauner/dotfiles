@@ -63,8 +63,9 @@ sudo systemsetup -setremotelogin on || echo -n ""
 mkdir -p ~/Library/Application\ Support/Spectacle
 cp -r content/mac-os/spectacle/. ~/Library/Application\ Support/Spectacle
 
-# Override iTerm2 config
-cp content/mac-os/iterm2/com.googlecode.iterm2.plist ~/Library/Preferences/
+# Sublime Text setup
+mkdir -p ~/Library/Application\ Support/Sublime\ Text\ 3/
+cp -r content/shared/sublime-text/. ~/Library/Application\ Support/Sublime\ Text\ 3/
 
 # iTerm2 setup
 cp -r content/mac-os/iterm2/. ~/Library/Preferences/

@@ -1,0 +1,26 @@
+{
+	"installed_packages":
+	[
+		"Babel",
+		"EditorConfig",
+		"Case Conversion",
+		"Dockerfile Syntax Highlighting",
+		"HexViewer",
+		"Jedi - Python autocompletion",
+		"Jinja2",
+		"LSP",
+		"nginx",
+		"Package Control",
+		"PostgreSQL Syntax Highlighting",
+		"Pretty JSON",
+		"Rust Enhanced",
+		"sublack",
+		"SublimeLinter",
+		"SublimeLinter-contrib-mypy",
+		"SublimeLinter-flake8",
+		"TabNine",
+		"Theme - Gravity",
+		"Theme - Spacegray",
+		"TOML"
+	]
+}
