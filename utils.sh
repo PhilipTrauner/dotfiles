@@ -1,6 +1,7 @@
 #!/bin/bash
 
 set -e
+shopt -s dotglob
 
 MAGENTA="\033[0;35m"
 RED="\033[0;31m"
