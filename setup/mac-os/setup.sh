@@ -19,8 +19,8 @@ CASKS=("airfoil" "appcleaner" "bartender" "blockblock" "docker" "dropbox" "etche
 	"spotify-notifications" "sublime-text-dev" "transmission" "typora" \
 	"virtualbox" "virtualbox-extension-pack" "vlc" "visual-studio-code" "wireshark")
 
-# Pixelmator, Keynote, Pages, Numbers, Xcode, Amphetamine
-MAS=("407963104" "409183694" "409201541" "409203825" "497799835" "937984704")
+# Pixelmator Pro, Keynote, Pages, Numbers, Xcode, Amphetamine, WireGuard
+MAS=("1289583905" "409183694" "409201541" "409203825" "497799835" "937984704" "1451685025")
 
 # Prevent sleep
 caffeinate -i -w $$ &
