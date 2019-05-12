@@ -23,6 +23,7 @@ SAVEHIST=1000
 
 # Aliases
 alias ip="ip -c"
+alias timestamp="date '+%s'"
 
 # zsh features
 setopt appendhistory autocd beep extendedglob nomatch notify NO_GLOBAL_RCS
